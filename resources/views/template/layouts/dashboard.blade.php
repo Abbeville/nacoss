@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html class="loading" lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-textdirection="ltr">
+{{-- <html class="loading" lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-textdirection="ltr"> --}}
+<html class="loading" lang="en" data-textdirection="ltr">
  
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
