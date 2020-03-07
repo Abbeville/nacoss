@@ -17,7 +17,7 @@ class User extends Authenticatable implements Payable
      * @var array
      */
     protected $fillable = [
-        'fname', 'lname', 'matric', 'level_id', 'programme_id', 'print_status','payment_status', 'password',
+        'fname', 'lname', 'matric', 'level_id', 'programme_id', 'print_status','payment_status', 'password','type',
     ];
 
     /**
