@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{{-- <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> --}}
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
