@@ -75,6 +75,7 @@ class RegisterController extends Controller
             'level_id' => $data['level_id'],
             'programme_id' => $data['programme_id'],
             'print_status' => 0,
+            'type' => 1,
             'password' => Hash::make($data['password']),
         ]);
     }
