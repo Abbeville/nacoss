@@ -14,7 +14,7 @@ class Programme extends Model
    /* protected $fillable = [
         'fname', 'lname', 'matric', 'password',
     ];*/
-    protected $table = 'Programmes';
+    protected $table = 'programmes';
 
     public function user(){
     	return $this->hasMany('App\User');

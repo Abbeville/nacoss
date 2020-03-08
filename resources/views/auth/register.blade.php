@@ -139,7 +139,7 @@
           </div>
           <div class="row mt-3">
             <div class="col-12 text-center">
-              <a href="{{ route('register') }}" class="text-light"><small>{{ __('Already have an account? Sign in')}}</small></a>
+              <a href="{{ route('login') }}" class="text-light"><small>{{ __('Already have an account? Sign in')}}</small></a>
             </div>
           </div>
         </div>
