@@ -53,7 +53,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" type="text" placeholder="{{ __('Matric No') }}" name="matric" value="{{ old('email') }}" required>
+                    <input class="form-control" type="text" placeholder="{{ __('Matric No/Form No') }}" name="matric" value="{{ old('email') }}" required>
 
                         @error('matric')
                             <span class="invalid-feedback" role="alert">
