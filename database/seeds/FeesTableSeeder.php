@@ -13,8 +13,12 @@ class FeesTableSeeder extends Seeder
     public function run()
     {
         $fees = array(
-         array('code' => 'PYMT-ND', 'amount' => 2500),
-         array('code' => 'PYMT-HND', 'amount' => 1500),
+         array('code' => 'PYMT-ND1', 'amount' => 2600),
+         array('code' => 'PYMT-ND2', 'amount' => 1600),
+         array('code' => 'PYMT-ND3', 'amount' => 1600),
+         array('code' => 'PYMT-HND1', 'amount' => 2600),
+         array('code' => 'PYMT-HND2', 'amount' => 1600),
+         array('code' => 'PYMT-HND3', 'amount' => 1600),
       );
         
         foreach($fees as $fee){
