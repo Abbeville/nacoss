@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index(){
     	$data = [];
-    	$data['registered'] = User::count();
+    	$data['registered'] = User::where('type', 1)->count();
     	$data['paid'] = User::where('payment_status', 1)->count();
     	$data['avatar'] = User::whereNotNull('avatar')->count();
     	$data['printed'] = User::where('print_status', 1)->count();

@@ -3,21 +3,21 @@
 <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
   <div class="main-menu-content">
     <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-      <li class="active"><a href="{{ route('dashboard.home') }}"><i class="la la-home"></i><span class="menu-title">Dashboard</span></a>
+      <li class="active"><a href="{{ route('dashboard.home') }}"><i style="font-size: 20px;">🏦</i><span class="menu-title">Dashboard</span></a>
       </li>
      
-<li class=" nav-item"><a href="{{ route('dashboard.profile') }}"><i class="la la-user"></i><span class="menu-title">Profile</span></a>
+<li class=" nav-item"><a href="{{ route('dashboard.profile') }}"><i style="font-size: 20px;">🙍</i><span class="menu-title">Profile</span></a>
 
 @if(Auth::user()->type == config('type.roles.member'))
 
-<li class=" nav-item"><a href="{{ route('dashboard.transactions') }}"><i class="la la-bar-chart"></i><span class="menu-title">Transaction History</span></a>
+<li class=" nav-item"><a href="{{ route('dashboard.transactions') }}"><i style="font-size: 20px;">💵</i><span class="menu-title">Transaction History</span></a>
 </li>
 
 @endif
 
 @if(Auth::user()->type != config('type.roles.member'))
 
-<li class=" nav-item"><a href="#"><i class="la la-users"></i><span class="menu-title">Members</span></a>
+<li class=" nav-item"><a href="#"><i style="font-size: 20px;">🙍</i><span class="menu-title">Members</span></a>
     <ul class="menu-content">
       <li><a class="menu-item" href="{{ route('member.all') }}"><i></i><span>Registered </span></a>
       </li>

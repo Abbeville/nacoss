@@ -23,9 +23,9 @@ Route::post('/rave/callback', 'Lib\RaveController@callback')->name('callback');
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashboard', 'Dashboard\HomeController@index')->name('dashboard.home');
+Route::get('/dashboard', 'Dashboard\HomeController@index')->middleware(['check.manual'])->name('dashboard.home');
 Route::get('/profile', 'Profile\HomeController@index')->middleware(['check.payment'])->name('dashboard.profile');
-Route::post('/profile', 'Profile\HomeController@update');
+Route::post('/profile', 'Profile\HomeController@update')->middleware(['check.manual']);
 Route::get('/transactions', 'TransactionController@index')->name('dashboard.transactions');
 Route::prefix('/')->group(function(){
 	Route::get('payment-page', 'PaymentController@index')->name('payment.home');

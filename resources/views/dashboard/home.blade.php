@@ -33,7 +33,8 @@
                 <div class="card-body">
                   <div class="media d-flex">
                     <div class="align-self-center">
-                      <i class="la la-user-md font-large-2 success"></i>
+                      {{-- <i class="la la-user-md font-large-2 success"></i> --}}
+                      <p style="font-size: 40px;">🙍</p>
                     </div>
                     <div class="media-body text-right">
                       <h5 class="text-muted text-bold-500">Registered Students</h5>
@@ -51,7 +52,8 @@
                 <div class="card-body">
                   <div class="media d-flex">
                     <div class="align-self-center">
-                      <i class="la la-user-md font-large-2 success"></i>
+                      {{-- <i class="la la-user-md font-large-2 success"></i> --}}
+                      <p style="font-size: 40px;">💵</p>
                     </div>
                     <div class="media-body text-right">
                       <h5 class="text-muted text-bold-500">Paid Students</h5>
@@ -69,7 +71,8 @@
                 <div class="card-body">
                   <div class="media d-flex">
                     <div class="align-self-center">
-                      <i class="la la-user-md font-large-2 success"></i>
+                      {{-- <i class="la la-user-md font-large-2 success"></i> --}}
+                      <p style="font-size: 40px;">🙍</p>
                     </div>
                     <div class="media-body text-right">
                       <h5 class="text-muted text-bold-500">Completed Profile</h5>
@@ -87,7 +90,8 @@
                 <div class="card-body">
                   <div class="media d-flex">
                     <div class="align-self-center">
-                      <i class="la la-user-md font-large-2 success"></i>
+                      {{-- <i class="la la-user-md font-large-2 success"></i> --}}
+                      <p style="font-size: 40px;">💳</p>
                     </div>
                     <div class="media-body text-right">
                       <h5 class="text-muted text-bold-500">Printed ID card</h5>

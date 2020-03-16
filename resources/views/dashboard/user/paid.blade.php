@@ -54,7 +54,7 @@
                                 @foreach($users as $user)
 
                                     @php
-                                        switch($user->status){
+                                        switch($user->payment_status){
                                             case '1':
                                                 $status_color = 'success';
                                                 $message = 'Paid';
