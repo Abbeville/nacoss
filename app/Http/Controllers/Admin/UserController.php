@@ -36,4 +36,21 @@ class UserController extends Controller
         Session::flash('success', "Marked Succesfully");
         return redirect()->back();
     }
+
+    public function verification(){
+        return view('dashboard.user.verify');
+    }
+
+    public function verify(Request $request){
+        $matric = $request->matric;
+        $user = User::where('matric', $matric)->first();
+        
+        if($user->payment_status){
+            Session::flash('success', "This Student has Paid");
+            return view('dashboard.payment-status', compact('user'));
+        }else{
+            Session::flash('error', "Yet to pay Due");
+            return redirect()->back();
+        }
+    }
 }

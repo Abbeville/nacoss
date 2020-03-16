@@ -30,6 +30,9 @@
   </ul>
 </li>
 
+<li class=" nav-item"><a href="{{ route('student.verify') }}"><i style="font-size: 20px;">💵</i><span class="menu-title">Verify</span></a>
+</li>
+
 @endif
 
 </ul>

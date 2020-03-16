@@ -37,3 +37,6 @@ Route::prefix('/members')->group(function(){
 	Route::get('/verify/{user}', 'Admin\UserController@markAsPrinted')->name('verify.member');
 	Route::get('/download/{user}', 'ImageController@download')->name('download.image');
 });
+
+Route::get('/verify', 'Admin\UserController@verification')->name('student.verify');
+Route::post('/verify', 'Admin\UserController@verify')->name('student.verify');
