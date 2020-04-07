@@ -38,15 +38,6 @@
         </div>
         <div class="card-content collapse show">
           <div class="card-body">
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        {{-- @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach --}}
-                    </ul>
-                </div>
-            @endif
 
             <form class="form" action="{{ route('dashboard.profile') }}" method="POST" enctype="multipart/form-data">
               @csrf
@@ -101,8 +92,11 @@
                     <div class="form-group">
                       <label>Select Photo</label>
                       <label id="projectinput7" class="file center-block">
-                        <input type="file" id="file" name="avatar">
+                        <input type="file" id="file" name="avatar" @error('avatar') is-invalid @enderror>
                         <span class="file-custom"></span>
+                        @error('avatar')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                       </label>
                     </div>
                   </div>

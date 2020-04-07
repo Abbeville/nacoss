@@ -23,7 +23,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" type="text" placeholder="{{ __('Matric No/ Form No') }}" name="matric" value="{{ old('matric') }}" required autofocus>
+                    <input class="form-control @error('matric') is-invalid @enderror" type="text" placeholder="{{ __('Matric No/ Form No') }}" name="matric" value="{{ old('matric') }}" required autofocus>
 
                     @error('matric')
                         <span class="invalid-feedback" role="alert">
