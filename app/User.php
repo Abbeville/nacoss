@@ -79,4 +79,8 @@ class User extends Authenticatable implements Payable
 
         return $array;
     }
+
+    public function getPaidAttribute(){
+        return $this->transactions()->where('status', 'success')->value('amount');
+    }
 }

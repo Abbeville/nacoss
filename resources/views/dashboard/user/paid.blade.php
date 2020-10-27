@@ -47,6 +47,7 @@
                                     <th>Fullname</th>
                                     <th>Matric</th>
                                     <th>Level</th>
+                                    <th>Amount</th>
                                     <th>Payment Status</th>
                                 </tr>
                             </thead>
@@ -77,6 +78,7 @@
                                     <td>{{ $user->fullName() }}</td>
                                     <td>{{ $user->matric }}</td>
                                     <td>{{ $user->level->name }}</td>
+                                    <td>{{ $user->paid }}</td>
                                     {{-- <td>{{ $user->created_at->format('M j, Y H:ia') }}</td> --}}
                                     <td><div class="badge badge-{{ $status_color }}">{{ $message }}</div></td>
 
