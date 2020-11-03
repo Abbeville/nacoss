@@ -23,14 +23,14 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" type="text" placeholder="{{ __('First Name') }}" name="fname" value="{{ old('fname') }}" required autofocus>
-
-                        @error('fname')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                    <input class="form-control" type="text" placeholder="{{ __('First Name') }}" name="fname" value="{{ old('fname') }}"  autofocus>
                   </div>
+                  @checkError($errors, 'fname')
+                      <div class="text-danger" role="alert">
+                          <strong>{{ $errors->first('fname') }}</strong>
+                      </div>
+
+                  @endcheckError
                 </div>
 
                 <div class="form-group mb-3">
@@ -38,14 +38,14 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" type="text" placeholder="{{ __('Last Name') }}" name="lname" value="{{ old('lname') }}" required autofocus>
+                    <input class="form-control" type="text" placeholder="{{ __('Last Name') }}" name="lname" value="{{ old('lname') }}"  autofocus>
 
-                        @error('lname')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                   </div>
+                        @checkError($errors, 'lname')
+                            <span class="text-danger" role="alert">
+                                <strong>{{ $errors->first('lname') }}</strong>
+                            </span>
+                        @endcheckError
                 </div>
 
                 <div class="form-group mb-3">
@@ -53,14 +53,14 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" type="text" placeholder="{{ __('Matric No/Form No') }}" name="matric" value="{{ old('email') }}" required>
+                    <input class="form-control" type="text" placeholder="{{ __('Matric No/Form No') }}" name="matric" value="{{ old('matric') }}" >
 
-                        @error('matric')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                   </div>
+                        @checkError($errors, 'matric')
+                            <span class="text-danger" role="alert">
+                                <strong>{{ $errors->first('matric') }}</strong>
+                            </span>
+                        @endcheckError
                 </div>
 
                 <div class="form-group mb-3">
@@ -75,12 +75,12 @@
                             @endforeach
                         </select>
 
-                        @error('programme_id')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                   </div>
+                        @checkError($errors, 'programme_id')
+                            <span class="text-danger" role="alert">
+                                <strong>{{ $errors->first('programme_id') }}</strong>
+                            </span>
+                        @endcheckError
                 </div>
 
                 <div class="form-group mb-3">
@@ -95,11 +95,11 @@
                             @endforeach
                         </select>
 
-                        @error('level_id')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
+                        @checkError($errors, 'level_id')
+                            <span class="text-danger" role="alert">
+                                <strong>{{ $errors->first('level_id') }}</strong>
                             </span>
-                        @enderror
+                        @endcheckError
                   </div>
                 </div>
 
@@ -109,14 +109,14 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" type="password" placeholder="{{ __('Password') }}" name="password" required>
-
-                    @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
+                    <input class="form-control" type="password" placeholder="{{ __('Password') }}" name="password" >
                   </div>
+
+                    @checkError($errors, 'password')
+                        <span class="text-danger" role="alert">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endcheckError
                 </div>
 
                 <div class="form-group">
@@ -124,7 +124,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                   <input class="form-control" type="password" placeholder="{{ __('Confirm Password') }}" name="password_confirmation" required>
+                   <input class="form-control" type="password" placeholder="{{ __('Confirm Password') }}" name="password_confirmation" >
 
                   </div>
                 </div>
