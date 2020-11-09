@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('mmembers:paid')->twiceDaily(1, 13)->emailOutputTo('abbeville13@gmail.com');
+        $schedule->command('mmembers:paid')->everyMinute()->emailOutputTo('abbeville13@gmail.com');
     }
 
     /**
