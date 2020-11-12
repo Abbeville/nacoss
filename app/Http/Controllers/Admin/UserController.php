@@ -45,11 +45,16 @@ class UserController extends Controller
         $matric = $request->matric;
         $user = User::where('matric', $matric)->first();
         
-        if($user->payment_status){
-            Session::flash('success', "This Student has Paid");
-            return view('dashboard.payment-status', compact('user'));
+        if ($user) {
+            if($user->payment_status){
+                Session::flash('success', "This Student has Paid");
+                return view('dashboard.payment-status', compact('user'));
+            }else{
+                Session::flash('error', "Yet to pay Due");
+                return redirect()->back();
+            }   
         }else{
-            Session::flash('error', "Yet to pay Due");
+            Session::flash('error', "The Matric/Form No you submitted has not been registered");
             return redirect()->back();
         }
     }

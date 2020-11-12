@@ -84,7 +84,7 @@ class RaveController extends Controller
 
             $transaction->save();
 
-            Session::flash('error', 'Transaction Failed! <a href="/profile">Please Upload your Passport for ID card collection.</a>');
+            Session::flash('error', 'Transaction Failed! Please try again');
             return redirect()->route('dashboard.home');
           }
 
