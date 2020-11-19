@@ -32,6 +32,26 @@ class RaveController extends Controller
     Rave::initialize(route('callback'));
   }
 
+  public function webhook(){
+    $data = Rave::receiveWebhook();
+
+    $txref = $data['txRef'];
+
+    if ($data['status'] == 'successful') {
+      $transaction = Transaction::where('txref', $txref)->first();
+      $user = User::whereId($transaction->user_id)->first();
+      //give your user value here
+      $user->payment_status = 1;
+      $user->save();
+      $transaction->update([
+      'flwref' => $data['flwRef'],
+      'type' => $data['event.type'],
+      ]);
+
+    }
+
+  }
+
   /**
    * Obtain Rave callback information
    * @return void

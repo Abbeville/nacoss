@@ -19,6 +19,7 @@ Route::get('/', 'Auth\LoginController@showLoginForm');
 
 Route::post('/pay', 'Lib\RaveController@initialize')->name('pay');
 Route::post('/rave/callback', 'Lib\RaveController@callback')->name('callback');
+Route::post('/rave/receive', 'Lib\RaveController@webhook')->name('webhook');
 
 Auth::routes();
 
